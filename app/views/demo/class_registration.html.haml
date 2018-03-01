@@ -1,0 +1,70 @@
+#content
+  #content_top
+  #content_main
+    = form_tag(demo_cls_details_path, method: 'post' , :remote => true) do 
+      %h1 Class Registration
+      %br
+      = label_tag(:st_name, "Student Name:")
+      %br 
+      %br
+      %input{:name => "st_fname", :type => "text" , :required => true}
+      &nbsp;&nbsp;
+      %input{:name => "st_lname", :type => "text" , :required => true}
+      %br
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      = label_tag(:st_fname, "Student First Name")
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      = label_tag(:st_lname, "Student Last Name")
+      %br
+      = label_tag(:address, "Address:") 
+      %br
+      %textarea{name: 'address' , :cols => "40", :rows => "3" , :required => true}
+      %br
+      %br
+      = label_tag(:selectgender, "Select Gender :")
+      %br
+      %br
+      = radio_button_tag(:gender, "male")
+      = label_tag(:male, "Male")
+      &nbsp;
+      = radio_button_tag(:gender, "female")
+      = label_tag(:female, "Female")
+      %br
+      %br
+      = label_tag(:dob, "Date of Birth:")
+      %br
+      %input{:name => "dob", :type => "date"}
+      %br
+      %br
+      = label_tag(:cls_ist, "List of classes:")
+      %select{name:'selectclass'}
+        %option{:value => "cs"} Computer Science
+        %option{:value => "ec"} Electronics
+        %option{:value => "mechanical"} Mechanical
+        %option{:value => "electrical"} Electrical
+      %br
+      %br
+      %br
+      %br
+      %br
+      = submit_tag("Submit") 
+    #result_div
+      %table{border: '1'}
+        %tr
+          %th First Name
+          %th Last Name
+          %th Address
+          %th DOB 
+          %th Gender
+          %th List of classes
+        %tr
+          %td#fn
+          %td#ln 
+          %td#ad 
+          %td#db  
+          %td#gen 
+          %td#lc
+  #content_bottom
+  #footer
+    %h3
+      %a{:href => "http://www.bryantsmith.com"} florida web design

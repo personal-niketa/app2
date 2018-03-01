@@ -1,0 +1,42 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = stylesheet_link_tag "green"
+    = stylesheet_link_tag "custom"
+    = stylesheet_link_tag "blue"
+    %title NightBeach | florida web design
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #container
+      #header
+        %h1
+          Slick
+          %span.off Green
+        %h2 A template by Bryant Smith
+      #menu= render 'shared/green_menu'
+      #leftmenu
+        #leftmenu_top
+        #leftmenu_main
+          %h3 Links
+          %ul
+            %li
+              %a{:href => "#"} SEO
+            %li
+              %a{:href => "#"} PHP
+            %li
+              %a{:href => "#"} Ajax
+            %li
+              %a{:href => "#"} jQuery
+            %li
+              %a{:href => "#"} Web design
+            %li
+              %a{:href => "#"} Web Programming
+            %li
+              %a{:href => "#"} Content Creation
+            %li
+              %a{:href => "#"} Internet Marketing
+            %li
+              %a{:href => "#"} XHTML Templates
+        #leftmenu_bottom
+      = yield

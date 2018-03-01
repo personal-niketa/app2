@@ -1,0 +1,50 @@
+#content
+  #content_top
+  #content_main
+    = form_tag(demo_data_path, method: 'post') do 
+      = label_tag(:name, "First Name:")
+      &nbsp; 
+      %input{:name => "fname", :type => "text" , :required => true}
+      %br/
+      %br
+      = label_tag(:address, "Address:") 
+      &nbsp;
+      %textarea{name: 'address' , :cols => "40", :rows => "3" , :required => true}
+      %br
+      %br
+      = label_tag(:languagesknown, "Languages known:")
+      %br
+      %br
+      = check_box_tag("Hindi")
+      = label_tag(:hindi, "Hindi")
+      %br
+      = check_box_tag("English")
+      = label_tag(:english, "English")
+      %br
+      %br
+      = label_tag(:selectgender, "Select Gender :")
+      %br
+      %br
+      = radio_button_tag(:gender, "male")
+      = label_tag(:male, "Male")
+      &nbsp;
+      = radio_button_tag(:gender, "female")
+      = label_tag(:female, "Female")
+      %br
+      %br
+      = label_tag(:city, "Select City:")
+      %select{name:'selectcity'}
+        %option{:value => "agra"} Agra
+        %option{:value => "delhi"} Delhi
+        %option{:value => "jaipur"} Jaipur
+        %option{:value => "noida"} Noida
+      %br
+      %br
+      %br
+      %br
+      %br
+      = submit_tag("Submit")
+  #content_bottom
+  #footer
+    %h3
+      %a{:href => "http://www.bryantsmith.com"} florida web design

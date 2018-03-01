@@ -1,0 +1,31 @@
+#content
+  #content_top
+  #content_main
+    %h1{:style => 'color: brown;'} Design Content
+    %br 
+    %br    
+    %input#show{type: 'button', value: 'Show'}
+    %input#hide{type: 'button', value: 'Hide'}
+    %input#green_button{type: 'button', value: 'Green'}
+    %input#yellow_button{type: 'button', value: 'Yellow'}
+    %input#selected_country{type: 'button', value: 'India'}
+    %input#txt{type: 'textbox'}
+    %input#btn{type: 'button', value: 'click me'}
+    %input#butn1{type: 'button', value: 'Change color'}
+    #customer_content
+      %table#customers
+        %tr
+          %th ID
+          %th Company
+          %th Contact
+          %th Country
+        - (1..50).each do |i| 
+          %tr
+            %td #{i} 
+            %td #{company(i)}
+            %td.marker #{contct_num(i)}
+            %td.clicked_country #{country(i)}
+  #content_bottom
+  #footer
+    %h3
+      %a{:href => "http://www.bryantsmith.com"} florida web design
