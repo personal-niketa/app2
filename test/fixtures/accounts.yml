@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  supplier_id: 1
+  account_number: MyString
+  supplier_id: 
+
+two:
+  supplier_id: 1
+  account_number: MyString
+  supplier_id: 

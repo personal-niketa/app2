@@ -66,6 +66,8 @@ class DemoController < ApplicationController
 
   def air_ticket_details
     @passenger_name = params[:p_name]
+
+    
     respond_to do |format|
       format.js   { render :layout => false }
    end
